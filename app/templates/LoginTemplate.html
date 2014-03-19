@@ -1,0 +1,23 @@
+<div ng-controller="LoginController">
+    <div class="page-center">
+        <form name="loginForm" ng-submit="dologin(form, loginForm)">
+            <h3>Loginpage</h3>
+            <br/>
+            <fieldset>
+                <label for="{{form.username.isfor}}">{{form.username.title}} :</label>
+                <input id="{{form.username.isfor}}" ng-model="form.username.value" type="{{form.username.type}}" required placeholder="{{form.username.placeholder}}" />
+
+                <label for="{{form.password.isfor}}">{{form.password.title}} :</label>
+                <input id="{{form.password.isfor}}" ng-model="form.password.value" type="{{form.password.type}}" required placeholder="{{form.password.placeholder}}" />
+
+                <div class="form-inline">
+                    <input id="rememberme" type="checkbox" class="checkbox">
+                    <label for="rememberme">Remember me</label>
+                </div>
+                <br/>
+            </fieldset>
+
+            <button type="submit" class="btn btn-default" data-loading-text="Please Wait..." >Login</button>
+        </form>
+    </div>
+</div>
